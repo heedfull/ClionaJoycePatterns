@@ -105,7 +105,6 @@ module.exports = function(grunt) {
       all: {
         files: [
           path.resolve(paths().source.css + '**/*.scss'),
-          path.resolve(paths().source.css + '**/*.css'),
           path.resolve(paths().source.styleguide + 'css/*.css'),
           path.resolve(paths().source.patterns + '**/*.mustache'),
           path.resolve(paths().source.patterns + '**/*.json'),
