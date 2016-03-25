@@ -1,31 +1,49 @@
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
-h1, .alpha   { 
-	line-height: 1.2;
+h1,.alpha{
+    font-size:32px;
+    font-size:2rem;     /* 32px */
+    line-height:1.5;    /* 48px */
+}
+h2,.beta{
+    font-size:1.5em;    /* 24px */
+    line-height:1;      /* 24px */
+}
+h3,.gamma{
+    font-size:20px;
+    font-size:1.25rem;  /* 20px */
+    line-height:1.2;    /* 24px */
+}
+h4,.delta{
+    font-size:18px;
+    font-size:1.125rem; /* 18px */
+    line-height:1.333;  /* 24px */
+}
+h5,.epsilon{
+    font-size:16px;
+    font-size:1rem;     /* 16px */
+    line-height:1.5;    /* 24px */
+}
+h6,.zeta{
+    font-size:16px;
+    font-size:1rem;     /* 16px */
+    line-height:1.5;    /* 24px */
 }
 
-h2, .beta    { 
-	line-height: 1.2;
+h1,h2,h3{
+  color: $main;
 }
 
-h3, .gamma   { 
-	line-height: 1.2;
-}
-
-h4, .delta   {
-	
-}
-
-h5, .epsilon { 
-	
-}
-
-h6, .zeta    { 
-	
+/* Smaller-than-body-copy sizes here. */
+small,.milli {
+    font-size:12px;
+    font-size:0.75rem;  /* 12px */
+    line-height:2;      /* 24px */
 }
 
 /* Subheadings */
 .subheading {
 	font-family: $font-secondary;
 	font-weight: normal;
+  color: $secondary;
 }

@@ -12,12 +12,18 @@ $gray-dark : #333;
 $gray-dark-2 : #131313;
 $white : #fff;
 $black : #000;
+$green : #307f3e;
+$brown : #6c4c1e;
+$orange : #15331a;
 $dim : rgba(0,0,0,0.5);
 $error : #f00;
 $valid : #089e00;
 $warning : #fff664;
 $information : #000db5;
 
+$main : $green;
+$secondary : $brown;
+$accent : $orange;
 
 //Typography
 $font : "Varela Round",'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 
