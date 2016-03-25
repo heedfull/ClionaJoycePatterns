@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
   var path = require('path');
 
@@ -12,7 +12,7 @@ module.exports = function (grunt) {
     concat: {
       options: {
         stripBanners: true,
-        banner: '/* \n * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy") %> \n * \n * <%= pkg.author %>, and the web community.\n * Licensed under the <%= pkg.license %> license. \n * \n * Many thanks to Brad Frost and Dave Olsen for inspiration, encouragement, and advice. \n *\n */\n\n',
+        banner: '/* \n * <%= pkg.name %> - v<%= pkg.version %> - <%= grunt.template.today("yyyy") %> \n * \n * <%= pkg.author %>, and the web community.\n * Licensed under the <%= pkg.license %> license. \n * \n * Many thanks to Brad Frost and Dave Olsen for inspiration, encouragement, and advice. \n *\n */\n\n'
       },
       patternlab: {
         src: './core/lib/patternlab.js',
@@ -65,23 +65,46 @@ module.exports = function (grunt) {
     },
     copy: {
       main: {
-        files: [
-          { expand: true, cwd: path.resolve(paths().source.js), src: '*.js', dest: path.resolve(paths().public.js) },
-          { expand: true, cwd: path.resolve(paths().source.css), src: '*.css', dest: path.resolve(paths().public.css) },
-          { expand: true, cwd: path.resolve(paths().source.images), src: ['**/*.png', '**/*.jpg', '**/*.gif', '**/*.jpeg'], dest: path.resolve(paths().public.images) },
-          { expand: true, cwd: path.resolve(paths().source.fonts), src: '*', dest: path.resolve(paths().public.fonts) },
-          { expand: true, cwd: path.resolve(paths().source.data), src: 'annotations.js', dest: path.resolve(paths().public.data) }
-        ]
+        files: [{
+          expand: true,
+          cwd: path.resolve(paths().source.js),
+          src: '*.js',
+          dest: path.resolve(paths().public.js)
+        }, {
+          expand: true,
+          cwd: path.resolve(paths().source.css),
+          src: '*.css',
+          dest: path.resolve(paths().public.css)
+        }, {
+          expand: true,
+          cwd: path.resolve(paths().source.images),
+          src: ['**/*.png', '**/*.jpg', '**/*.gif', '**/*.jpeg'],
+          dest: path.resolve(paths().public.images)
+        }, {
+          expand: true,
+          cwd: path.resolve(paths().source.fonts),
+          src: '*',
+          dest: path.resolve(paths().public.fonts)
+        }, {
+          expand: true,
+          cwd: path.resolve(paths().source.data),
+          src: 'annotations.js',
+          dest: path.resolve(paths().public.data)
+        }]
       },
       styleguide: {
-        files: [
-          { expand: true, cwd: path.resolve(paths().source.styleguide), src: ['*.*', '**/*.*'], dest: path.resolve(paths().public.styleguide) }
-        ]
+        files: [{
+          expand: true,
+          cwd: path.resolve(paths().source.styleguide),
+          src: ['*.*', '**/*.*'],
+          dest: path.resolve(paths().public.styleguide)
+        }]
       }
     },
     watch: {
       all: {
         files: [
+          path.resolve(paths().source.css + '**/*.scss'),
           path.resolve(paths().source.css + '**/*.css'),
           path.resolve(paths().source.styleguide + 'css/*.css'),
           path.resolve(paths().source.patterns + '**/*.mustache'),
@@ -100,7 +123,7 @@ module.exports = function (grunt) {
     browserSync: {
       dev: {
         options: {
-          server:  path.resolve(paths().public.root),
+          server: path.resolve(paths().public.root),
           watchTask: true,
           watchOptions: {
             ignoreInitial: true,
@@ -110,14 +133,12 @@ module.exports = function (grunt) {
             // Ignore all HTML files within the templates folder
             blacklist: ['/index.html', '/', '/?*']
           },
-          plugins: [
-            {
-              module: 'bs-html-injector',
-              options: {
-                files: [path.resolve(paths().public.root + '/index.html'), path.resolve(paths().public.styleguide + '/styleguide.html')]
-              }
+          plugins: [{
+            module: 'bs-html-injector',
+            options: {
+              files: [path.resolve(paths().public.root + '/index.html'), path.resolve(paths().public.styleguide + '/styleguide.html')]
             }
-          ],
+          }],
           notify: {
             styles: [
               'display: none',
@@ -147,21 +168,31 @@ module.exports = function (grunt) {
     },
     bsReload: {
       css: path.resolve(paths().public.root + '**/*.css')
+    },
+    sass: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: {
+          'source/css/style.css': 'source/css/style.scss'
+        }
+      }
     }
   });
 
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-
+  // grunt.loadNpmTasks('grunt-sass');
   //load the patternlab task
   grunt.task.loadTasks('./core/lib/');
 
-  grunt.registerTask('default', ['patternlab', 'copy:main', 'copy:styleguide']);
+  grunt.registerTask('default', ['patternlab', 'sass', 'copy:main', 'copy:styleguide']);
 
-  //travis CI task
+  // travis CI task
   grunt.registerTask('travis', ['nodeunit', 'eslint', 'patternlab']);
 
-  grunt.registerTask('serve', ['patternlab', 'copy:main', 'copy:styleguide', 'browserSync', 'watch:all']);
+  grunt.registerTask('serve', ['patternlab', 'sass', 'copy:main', 'copy:styleguide', 'browserSync', 'watch:all']);
 
   grunt.registerTask('build', ['nodeunit', 'eslint', 'concat']);
 
