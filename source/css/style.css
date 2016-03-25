@@ -167,11 +167,11 @@ body {
 
 /* Links */
 a {
-  color: #333;
+  color: #307f3e;
   text-decoration: none;
   outline: 0; }
   a:hover, a:focus {
-    color: #808080; }
+    color: #ff6600; }
 
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
@@ -216,7 +216,7 @@ h6, .zeta {
   line-height: 1.5;
   /* 24px */ }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   color: #307f3e; }
 
 /* Smaller-than-body-copy sizes here. */
