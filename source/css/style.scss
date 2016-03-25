@@ -26,6 +26,28 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
 
 */
 
+/*!
+Theme Name: ClionaJoyce
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: clionajoyce
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ClionaJoyce is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
 /*------------------------------------*\
     $TABLE OF CONTENTS 
     based generally on Harry Roberts excellent CSS Guidelines https://github.com/csswizardry/CSS-Guidelines
@@ -66,6 +88,7 @@ So feel free to use any of these approaches. Or don't. It's totally up to you.
     $GLOBAL ELEMENTS
 \*------------------------------------*/
 @import "scss/base/global-classes";
+@import "scss/base/wordpress";
 @import "scss/base/main";
 @import "scss/base/fonts";
 @import "scss/base/links";
