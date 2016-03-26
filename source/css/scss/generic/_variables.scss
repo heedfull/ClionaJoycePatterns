@@ -16,15 +16,17 @@ $green : #307f3e;
 $dark-green : #15331a;
 $brown : #6c4c1e;
 $orange : #ff6600;
-$dim : rgba(0,0,0,0.5);
+$dim : rgba(224,224,224,1);
 $error : #f00;
 $valid : #089e00;
 $warning : #fff664;
 $information : #000db5;
 
 $main : $green;
+$main-dark : darken($main, 10%);
 $secondary : $brown;
 $accent : $orange;
+$accent-dark : darken($accent, 20%);
 
 //Typography
 $font : "Varela Round",'Century Gothic', CenturyGothic, AppleGothic, sans-serif; 

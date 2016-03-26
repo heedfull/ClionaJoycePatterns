@@ -186,8 +186,7 @@ header, footer, nav, section, article, hgroup, figure {
 .main-navigation {
   clear: both;
   display: block;
-  float: left;
-  width: 100%; }
+  float: left; }
 
 .main-navigation ul {
   display: none;
@@ -472,7 +471,7 @@ a {
   text-decoration: none;
   outline: 0; }
   a:hover, a:focus {
-    color: #ff6600; }
+    color: #225a2c; }
 
 /* Headings */
 /*Further Reading: http:/csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/ */
@@ -556,6 +555,9 @@ hr {
 abbr {
   border-bottom: 1px dotted #808080;
   cursor: help; }
+
+mark {
+  background-color: #ff6600; }
 
 ol, ul {
   margin: 0;
@@ -892,6 +894,22 @@ td {
   padding: 0;
   border-bottom: 1px solid #dbdbdb; }
 
+.site-title {
+  font-size: 32px;
+  font-size: 2rem;
+  /* 32px */
+  line-height: 1.5;
+  /* 48px */
+  padding-top: 1em;
+  margin-bottom: 0.5em; }
+
+.site-description {
+  color: #6c4c1e;
+  font-family: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
 .logo {
   float: left;
   max-width: 8rem;
@@ -926,24 +944,25 @@ td {
 
 /*------------------------------------*    $NAVIGATION
 \*------------------------------------*/
-.nav {
+.main-navigation {
   clear: both;
   overflow: hidden;
   max-height: 0; }
-  .nav a {
+  .main-navigation li:first-child a {
+    padding-left: 0; }
+  .main-navigation a {
     display: block;
     padding: 1em;
     border-top: 1px solid #eee; }
-  .nav.active {
+  .main-navigation.active {
     max-height: 40em; }
   @media all and (min-width: 46.8em) {
-    .nav {
+    .main-navigation {
       max-height: none;
-      float: right;
       clear: none; }
-      .nav li {
+      .main-navigation li {
         float: left; }
-      .nav a {
+      .main-navigation a {
         border: 0; } }
 
 .pagination {
@@ -1137,16 +1156,21 @@ td {
 \*------------------------------------*/
 .btn {
   display: inline-block;
-  background: #333;
+  background: #307f3e;
   color: #fff;
   line-height: 1;
   font-weight: bold;
   padding: 1em;
   border: 0;
-  text-align: center; }
+  text-align: center;
+  border-radius: 5px; }
   .btn:hover, .btn:focus {
-    background: #808080;
+    background: #225a2c;
     color: #fff; }
+  .btn.alt {
+    background: #ff6600; }
+    .btn.alt:hover, .btn.alt:focus {
+      background: #993d00; }
   .btn.disabled {
     background: #eee;
     color: #808080; }
@@ -1194,7 +1218,7 @@ td {
         bottom: 0;
         left: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background: #e0e0e0;
         color: #fff;
         padding: 1.5em; } }
 
@@ -1248,7 +1272,7 @@ td {
     bottom: 0;
     left: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: #e0e0e0;
     color: #fff;
     padding: 0.5em; }
 

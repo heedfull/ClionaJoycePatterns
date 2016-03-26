@@ -5,6 +5,22 @@
 	@extend .lc;
 }
 
+.site-title {
+	font-size: 32px;
+  font-size: 2rem;     /* 32px */
+  line-height: 1.5;    /* 48px */
+  padding-top: 1em;
+  margin-bottom: 0.5em;
+}
+
+.site-description {
+	color: $secondary;
+	font-family: $font-secondary;
+	font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
 .logo {
 	float: left;
 	max-width: 8rem;

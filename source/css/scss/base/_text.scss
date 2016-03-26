@@ -24,3 +24,7 @@ abbr {
     border-bottom: 1px dotted $gray;
     cursor: help;
 }
+
+mark {
+    background-color: $accent;
+}

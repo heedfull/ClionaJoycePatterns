@@ -3,17 +3,25 @@
 \*------------------------------------*/
 .btn {
 	display: inline-block;
-	background: $gray-dark;
+	background: $main;
 	color: $white;
 	line-height: 1;
 	font-weight: bold;
 	padding: $pad;
 	border: 0;
 	text-align: center;
+	border-radius: 5px;
 	
 	&:hover, &:focus {
-		background: $gray;
+		background: $main-dark;
 		color: $white;
+	}
+
+	&.alt {
+		background: $accent;
+		&:hover, &:focus {
+			background: $accent-dark
+		}
 	}
 
 	&.disabled {
