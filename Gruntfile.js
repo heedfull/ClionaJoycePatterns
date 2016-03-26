@@ -182,7 +182,7 @@ module.exports = function(grunt) {
 
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
-  // grunt.loadNpmTasks('grunt-sass');
+
   //load the patternlab task
   grunt.task.loadTasks('./core/lib/');
 
