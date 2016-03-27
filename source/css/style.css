@@ -918,7 +918,9 @@ td {
   margin: 0.4rem; }
   @media all and (min-width: 46.8em) {
     .logo {
-      max-width: 9rem; } }
+      max-width: 9rem;
+      position: absolute;
+      left: 5%; } }
 
 .nav-toggle {
   float: right;

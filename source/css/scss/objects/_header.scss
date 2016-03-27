@@ -36,6 +36,8 @@
 
 	@media all and (min-width: $bp-med) {
 		max-width: 9rem;
+		position: absolute;
+		left: 5%;
 	}
 }
 
