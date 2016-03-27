@@ -6,19 +6,27 @@
 	clear: both;
 	overflow: hidden;
 	max-height: 0;
+	text-align: center;
 	
 	li:first-child a{
-		padding-left: 0;
+		// padding-left: 0;
 	}
 
 	a {
 		display: block;
 		padding: $pad;
 		border-top: 1px solid $gray-light-2;
+		// border-left: 1px solid $gray-light-2;
+		// border-right: 1px solid $gray-light-2;
 	}
 
 	&.active {
 		max-height: 40em;
+	}
+
+	a:hover {
+		color: white;
+		background: $main;
 	}
 
 	@media all and (min-width: $bp-med) {
@@ -27,7 +35,8 @@
 		clear: none;
 
 		li {
-			float: left;
+			// float: left;
+			display: inline-block;
 		}
 
 		a {
@@ -35,6 +44,11 @@
 		}
 		
 	}
+}
+
+.nav-menu {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 //Pagination

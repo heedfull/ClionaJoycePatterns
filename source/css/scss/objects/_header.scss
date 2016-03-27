@@ -5,6 +5,14 @@
 	@extend .lc;
 }
 
+.site-branding {
+	text-align: center;
+}
+
+.site-title, .site-description {
+	text-align: center;
+}
+
 .site-title {
 	font-size: 32px;
   font-size: 2rem;     /* 32px */
@@ -22,7 +30,7 @@
 }
 
 .logo {
-	float: left;
+	// float: left;
 	max-width: 8rem;
 	margin: 0.4rem;
 
