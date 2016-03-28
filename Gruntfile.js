@@ -99,6 +99,14 @@ module.exports = function(grunt) {
           src: ['*.*', '**/*.*'],
           dest: path.resolve(paths().public.styleguide)
         }]
+      },
+      wordpress: {
+        files: [{
+          expand: true,
+          cwd: path.resolve(paths().public.css),
+          src: '*.css',
+          dest: "/Users/edwin/Dropbox/ClionaJoyce/vagrant-local/www/wordpress-default/wp-content/themes/ClionaJoyce"
+        }]
       }
     },
     watch: {
@@ -186,12 +194,12 @@ module.exports = function(grunt) {
   //load the patternlab task
   grunt.task.loadTasks('./core/lib/');
 
-  grunt.registerTask('default', ['patternlab', 'sass', 'copy:main', 'copy:styleguide']);
+  grunt.registerTask('default', ['patternlab', 'sass', 'copy:main', 'copy:styleguide', 'copy:wordpress']);
 
   // travis CI task
   grunt.registerTask('travis', ['nodeunit', 'eslint', 'patternlab']);
 
-  grunt.registerTask('serve', ['patternlab', 'sass', 'copy:main', 'copy:styleguide', 'browserSync', 'watch:all']);
+  grunt.registerTask('serve', ['patternlab', 'sass', 'copy:main', 'copy:styleguide', 'copy:wordpress', 'browserSync', 'watch:all']);
 
   grunt.registerTask('build', ['nodeunit', 'eslint', 'concat']);
 
