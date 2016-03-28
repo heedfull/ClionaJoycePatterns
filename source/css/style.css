@@ -514,7 +514,9 @@ h6, .zeta {
   /* 24px */ }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #307f3e; }
+  color: #307f3e;
+  margin-top: 1em;
+  margin-bottom: 1em; }
 
 /* Smaller-than-body-copy sizes here. */
 small, .milli {
@@ -819,7 +821,7 @@ td {
     .g-max4 > .gi:nth-of-type(2n+1) {
       clear: both; } }
 
-@media all and (min-width: 39.8em) {
+@media all and (min-width: 37.5em) {
   .g-max4 > .gi {
     width: 33.3333333%; }
     .g-max4 > .gi:nth-of-type(2n+1) {
@@ -842,7 +844,7 @@ td {
   .g-max5 > .gi:nth-of-type(2n+1) {
     clear: both; }
 
-@media all and (min-width: 39.8em) {
+@media all and (min-width: 37.5em) {
   .g-max5 > .gi {
     width: 33.3333333%; }
     .g-max5 > .gi:nth-of-type(2n+1) {
@@ -961,7 +963,7 @@ td {
   .main-navigation a:hover {
     color: white;
     background: #307f3e; }
-  @media all and (min-width: 46.8em) {
+  @media all and (min-width: 37.5em) {
     .main-navigation {
       max-height: none;
       clear: none; }
@@ -1361,7 +1363,7 @@ td {
   @media all and (min-width: 29.75em) {
     .tooltip {
       width: 27em; } }
-  @media all and (min-width: 39.8em) {
+  @media all and (min-width: 37.5em) {
     .tooltip {
       width: 30em; } }
 

@@ -29,7 +29,7 @@
 		background: $main;
 	}
 
-	@media all and (min-width: $bp-med) {
+	@media all and (min-width: $bp-small-3) {
 		max-height: none;
 		// float: left;
 		clear: none;
