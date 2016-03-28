@@ -619,9 +619,10 @@ input[type=text], input[type=search], input[type=url], input[type=number], texta
 
 button, input[type="submit"] {
   padding: 0.5em;
-  background: #333;
-  border: 1px solid #808080;
-  cursor: pointer; }
+  background: #307f3e;
+  border: none;
+  cursor: pointer;
+  color: white; }
 
 input[type="checkbox"],
 input[type="radio"] {
@@ -713,7 +714,7 @@ td {
 /*------------------------------------*    $LAYOUT
 \*------------------------------------*/
 /* Layout Container */
-.lc, .header, [role=main] {
+.lc, .header, .site-header, [role=main] {
   max-width: 72em;
   margin: 0 auto;
   padding: 0.5em; }
@@ -885,9 +886,9 @@ td {
 
 /*------------------------------------*    $PAGE STRUCTURE
 \*------------------------------------*/
-.header {
+.header, .site-header {
   background: #fff;
-  padding: 0;
+  padding: 0.5rem;
   border-bottom: 1px solid #dbdbdb; }
 
 .site-branding {
@@ -950,7 +951,6 @@ td {
 .main-navigation {
   clear: both;
   overflow: hidden;
-  max-height: 0;
   text-align: center; }
   .main-navigation a {
     display: block;
