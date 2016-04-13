@@ -80,7 +80,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "scss/generic/mixins";
 @import "scss/generic/reset";
 
-
+@import "bower_components/breakpoint-sass/stylesheets/breakpoint";
 
 
 
@@ -129,6 +129,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*------------------------------------*\
     $COMPONENTS
 \*------------------------------------*/
+.svg {
+    @import "scss/objects/icons.data.svg.scss";
+}
 @import "scss/objects/icons";
 @import "scss/objects/buttons";
 @import "scss/objects/blocks";
@@ -141,4 +144,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "scss/objects/comments";
 @import "scss/objects/messaging";
 
+@import "scss/specific/clionajoyce";
 

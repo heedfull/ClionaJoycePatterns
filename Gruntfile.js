@@ -1,5 +1,5 @@
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
+  'use strict';
   var path = require('path');
 
   function paths() {
@@ -106,6 +106,23 @@ module.exports = function(grunt) {
           cwd: path.resolve(paths().public.css),
           src: '*.css',
           dest: "/Users/edwin/Dropbox/ClionaJoyce/vagrant-local/www/wordpress-default/wp-content/themes/ClionaJoyce"
+        },
+        {
+          expand: true,
+          cwd: path.resolve(paths().public.js),
+          src: ['modernizr.js'],
+          dest: "/Users/edwin/Dropbox/ClionaJoyce/vagrant-local/www/wordpress-default/wp-content/themes/ClionaJoyce/js"
+        }]
+      },
+      svg: {
+        files: [{
+          expand: true,
+          cwd: 'public/images/icons',
+          src: '*.css',
+          dest: path.resolve(paths().source.css + 'scss/objects/'),
+          rename: function (dest, src) {
+            return dest + src.replace(/(^.*?)\.css$/, "\/_$1.scss");
+          }
         }]
       }
     },
@@ -164,6 +181,10 @@ module.exports = function(grunt) {
               'text-align: center'
             ]
           }
+        },
+        snippetOptions: {
+          // Ignore all HTML files within the templates folder
+          blacklist: ['/index.html', '/']
         }
       }
     },
@@ -184,6 +205,43 @@ module.exports = function(grunt) {
         files: {
           'source/css/style.css': 'source/css/style.scss'
         }
+      }
+    },
+    svgstore: {
+      options: {},
+      default: {
+        files: {
+          'public/images/icons.svg': ['source/images/icons/*.svg']
+        }
+      }
+    },
+    grunticon: {
+      icons: {
+        files: [{
+          expand: true,
+          cwd: 'source/images/icons',
+          src: ['*.svg', '*.png'],
+          dest: "public/images/icons"
+        }],
+        options: {
+          customselectors: {
+            "*": [".icon-$1:before"]
+          }
+        }
+      }
+    },
+    modernizr: {
+      default: {
+        "crawl": false,
+        "customTests": [],
+        "dest": "source/js/modernizr.js",
+        "tests": [
+          "svg"
+        ],
+        "options": [
+          "setClasses"
+        ],
+        "uglify": false
       }
     }
   });

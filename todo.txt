@@ -1,0 +1,1 @@
+implement fallback for icons if svg isn't supported

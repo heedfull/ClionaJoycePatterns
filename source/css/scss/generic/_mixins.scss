@@ -21,3 +21,14 @@
   @else { font-size: $decimal-size * $base-font-multiplier * 16px;}
   font-size: $decimal-size * 1rem;
 }
+
+/* Golden Ratio */
+
+@mixin gr($size){
+  @if $size == small {
+  width: 100% * 0.618/1.618;
+  }
+  @if $size == large {
+  width: 100% * 1/1.618;
+  }
+}

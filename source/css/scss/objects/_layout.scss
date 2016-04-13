@@ -83,6 +83,35 @@
 	}
 }
 
+/* Grid 2up golden ratio*/
+.g-2up--golden {
+	@media all and (min-width: $bp-small) {
+		> .gi {
+			float: left;
+			width: 100% * 1/1.618;
+			
+			&:nth-of-type(odd) {
+				clear: left;
+				width: 100% * 0.618/1.618;
+			}
+		}
+	}
+}
+
+.g-2up--golden-reverse{
+		@media all and (min-width: $bp-med) {
+		> .gi{
+			width: 100% * 1/1.618;
+			float: left;
+		
+			&:nth-of-type(odd){
+				width: 100% * 0.618/1.618;
+				float: left;
+			}
+		}
+	}
+}
+
 /* Grid Half (Always displayed side by side) */
 .g-half {
 	> .gi {
@@ -285,4 +314,12 @@
 			text-align: right;
 		}
 	}
+}
+
+.gr-small {
+	width: 100% * 0.618/1.618;	
+}
+
+.gr-large {
+	width: 100% * 1/1.618;
 }

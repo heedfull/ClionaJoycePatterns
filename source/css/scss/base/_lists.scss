@@ -1,5 +1,5 @@
 ol, ul {
-	margin: 0;
+	margin: 0 0 $pad;
 	padding: 0;
 	list-style: none;
 }
@@ -16,4 +16,28 @@ dt {
 
 dd {
 	margin-left: 0;
+}
+
+.branded {
+  margin: $pad $pad;
+ // list-style-image: url("data:image/svg+xml;<svg viewBox='0 0 100 100' class='icon shape-codepen'><use xlink:href='/images/icons.svg#tomato'></use></svg>");
+
+  li:nth-child(4n+1){
+    @extend .icon-apple;
+  }
+  li:nth-child(4n+2){
+    @extend .icon-artichoke;
+  }
+  li:nth-child(4n+3){
+    @extend .icon-lemon
+  }
+  li:nth-child(4n+4){
+    @extend .icon-pepper
+  }
+}
+
+div.branded{
+  background-image: url("data:image/svg+xml;<svg viewBox='0 0 100 100' class='icon shape-codepen'><use href='http://localhost:3000/images/icons.svg#tomato'></use></svg>");
+  width: 100px;
+  height: 100px
 }

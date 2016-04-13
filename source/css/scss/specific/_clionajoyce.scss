@@ -1,0 +1,12 @@
+.portrait {
+  max-width: 300px;
+  margin: auto;
+  @include breakpoint($bp-med) {
+    max-width: 100%; 
+    // @include gr(small);
+    // float: left;
+    // margin: 0 $pad;
+    
+
+  }
+}

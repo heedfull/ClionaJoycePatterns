@@ -1,4 +1,5 @@
 node_modules/
+bower_components/
 .DS_Store
 latest-change.txt
 patternlab.json
@@ -7,3 +8,4 @@ patternlab.json
 Thumbs.db
 source/css/style.css.map
 .idea/
+public/
