@@ -20,6 +20,8 @@ dd {
 
 .branded {
   margin: $pad $pad;
+  padding-left: 1em;
+  text-indent: -1.5em;
  // list-style-image: url("data:image/svg+xml;<svg viewBox='0 0 100 100' class='icon shape-codepen'><use xlink:href='/images/icons.svg#tomato'></use></svg>");
 
   li:nth-child(4n+1){
