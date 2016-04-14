@@ -1496,4 +1496,10 @@ td {
     .portrait {
       max-width: 100%; } }
 
+@media (min-width: 46.8em) {
+  .wpcf7-form, .map, .contact-details {
+    width: 50%;
+    padding: 0 1em;
+    float: left; } }
+
 /*# sourceMappingURL=style.css.map */

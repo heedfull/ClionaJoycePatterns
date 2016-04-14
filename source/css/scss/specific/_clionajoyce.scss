@@ -10,3 +10,12 @@
 
   }
 }
+
+.wpcf7-form, .map, .contact-details {
+  @include breakpoint($bp-med) {
+    width: 50%;
+    padding: 0 $pad;
+    float: left;
+  }
+}
+
