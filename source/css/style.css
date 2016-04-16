@@ -1261,7 +1261,7 @@ td {
     .block-thumb .b-thumb {
       display: table-cell;
       vertical-align: top;
-      width: 30%;
+      width: 38.195302843%;
       max-width: 10em; }
       .block-thumb .b-thumb img {
         display: block;
@@ -1270,8 +1270,13 @@ td {
   @media all and (min-width: 29.75em) {
     .block-thumb .b-text {
       display: table-cell;
-      width: 70%;
+      vertical-align: middle;
+      width: 61.804697157%;
       padding: 0 1em; } }
+
+/* swap order */
+.block-thumb--reverse {
+  direction: rtl; }
 
 /* Block Headline Summary */
 .block-headline-summary a {

@@ -61,7 +61,8 @@
 		@media all and (min-width: $bp-small-2) {
 			display: table-cell;
 			vertical-align: top;	
-	  		width: 30%;
+	  		// width: 30%;
+	  		@include gr(small)
 	  		max-width: 10em;
 
 	 		img {
@@ -75,12 +76,17 @@
 	.b-text {
 		@media all and (min-width: $bp-small-2) {
 			display: table-cell;
-			width: 70%;
+			vertical-align: middle;
+			@include gr(large);
 			padding: 0 $pad;
 		}
 	}
 }
 
+/* swap order */
+.block-thumb--reverse {
+	direction: rtl;
+} 
 
 /* Block Headline Summary */
 .block-headline-summary {
