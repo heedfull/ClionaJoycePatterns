@@ -7,6 +7,7 @@
 
 .site-branding {
 	text-align: center;
+	position: relative;
 }
 
 .site-title, .site-description {
@@ -37,7 +38,7 @@
 	@media all and (min-width: $bp-med) {
 		max-width: 9rem;
 		position: absolute;
-		left: 5%;
+		left: 0;
 	}
 }
 

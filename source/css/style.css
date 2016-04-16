@@ -939,7 +939,8 @@ td {
   border-bottom: 1px solid #dbdbdb; }
 
 .site-branding {
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 .site-title, .site-description {
   text-align: center; }
@@ -967,7 +968,7 @@ td {
     .logo {
       max-width: 9rem;
       position: absolute;
-      left: 5%; } }
+      left: 0; } }
 
 .nav-toggle {
   float: right;
