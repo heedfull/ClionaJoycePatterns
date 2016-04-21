@@ -50,6 +50,7 @@
 	display: table;
 	width: 100%;
 	border-collapse: collapse;
+	margin-bottom: 4*$space;
 
 	.b-inner {
 		display: table-row;
@@ -86,6 +87,9 @@
 /* swap order */
 .block-thumb--reverse {
 	direction: rtl;
+	.b-text {
+		direction: ltr;
+	}
 } 
 
 /* Block Headline Summary */

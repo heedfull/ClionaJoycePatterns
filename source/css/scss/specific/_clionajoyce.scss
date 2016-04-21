@@ -2,7 +2,8 @@
   max-width: 300px;
   margin: auto;
   @include breakpoint($bp-med) {
-    max-width: 100%; 
+    // max-width: 100%; 
+    @include gr(large);
     // @include gr(small);
     // float: left;
     // margin: 0 $pad;
@@ -11,14 +12,23 @@
   }
 }
 
-.wpcf7-form, .map, .contact-details {
-  @include breakpoint($bp-med) {
-    width: 50%;
-    padding: 0 $pad;
-    float: left;
+// .wpcf7-form, .map, .contact-details {
+//   @include breakpoint($bp-med) {
+//     width: 50%;
+//     padding: 0 $pad;
+//     float: left;
+//   }
+// }
+
+.home {
+  .entry-content {
+    text-align: center;
+  }
+  img {
+    // @include gr(large);
+    @include breakpoint($bp-med){
+      @include gr(small);
+    }
   }
 }
 
-.home .entry-content {
-  text-align: center;
-}
