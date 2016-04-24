@@ -110,7 +110,7 @@ module.exports = function (grunt) {
         {
           expand: true,
           cwd: path.resolve(paths().public.js),
-          src: ['modernizr.js'],
+          src: ['modernizr.js', 'flickity.pkgd.min.js', 'homepage.js', 'flickity.pkgd.js'],
           dest: "/Users/edwin/Dropbox/ClionaJoyce/vagrant-local/www/wordpress-default/wp-content/themes/ClionaJoyce/js"
         }]
       },
