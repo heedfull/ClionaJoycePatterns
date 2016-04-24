@@ -4,5 +4,6 @@ var flkty = new Flickity( elem, {
   // cellAlign: 'left',
   // contain: true
   setGallerySize: false,
-  wrapAround: true
+  wrapAround: true,
+  imagesLoaded: true
 });
