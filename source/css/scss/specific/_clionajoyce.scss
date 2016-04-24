@@ -27,8 +27,34 @@
   img {
     // @include gr(large);
     @include breakpoint($bp-med){
-      @include gr(small);
+      // @include gr(small);
     }
   }
 }
 
+// .main-gallery {
+//   height: 216px;
+// }
+
+// .gallery-cell {
+//   height: 100%;
+// }
+
+.main-gallery {
+  padding-bottom: 61.8%;
+  @include breakpoint($bp-small) {
+    height: 216px;
+    padding-bottom: 0;
+  }
+}
+
+/* viewport inherit size from carousel */
+.main-gallery .flickity-viewport {
+  position: absolute;
+  width: 100%;
+}
+
+/* cell inherit height from carousel */
+.gallery-cell {
+  height: 100%;
+}
