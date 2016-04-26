@@ -45,6 +45,7 @@
   @include breakpoint($bp-small) {
     height: 216px;
     padding-bottom: 0;
+    margin-bottom: 2*$pad;
   }
 }
 

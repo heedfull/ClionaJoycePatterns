@@ -1647,7 +1647,8 @@ http://flickity.metafizzy.co
   @media (min-width: 24em) {
     .main-gallery {
       height: 216px;
-      padding-bottom: 0; } }
+      padding-bottom: 0;
+      margin-bottom: 2em; } }
 
 /* viewport inherit size from carousel */
 .main-gallery .flickity-viewport {
