@@ -12,6 +12,12 @@ blockquote {
 	margin-bottom: $space;
 }
 
+/* Short Testimonial */
+.testimonial--short {
+    text-align: center;
+    border-left: none;
+}
+
 /* Horizontal Rule */ 
 hr {
 	border: 0;

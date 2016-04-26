@@ -548,6 +548,11 @@ blockquote {
   padding-left: 1em;
   margin-bottom: 1em; }
 
+/* Short Testimonial */
+.testimonial--short {
+  text-align: center;
+  border-left: none; }
+
 /* Horizontal Rule */
 hr {
   border: 0;
