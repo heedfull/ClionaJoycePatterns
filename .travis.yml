@@ -9,9 +9,9 @@ node_js:
 before_install:
   - phantomjs --version
 
-before_script:
+install:
+  - npm install
   - npm install -g grunt-cli
-
 branches:
   only:
     - master
